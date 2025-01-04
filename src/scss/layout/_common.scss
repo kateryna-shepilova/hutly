@@ -1,0 +1,172 @@
+@use "./layout/variables" as vars;
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: vars.$base-font;
+  font-size: vars.$font-size;
+  color: vars.$white;
+  background-color: vars.$dark-blue;
+  line-height: 1.5;
+  font-weight: 400;
+  overflow-x: hidden;
+  @media (min-width: vars.$pc-xl) {
+    font-size: 24px;
+  }
+  &.menu-active {
+    overflow: hidden;
+  }
+}
+
+.page-holder {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.wrapper {
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.container {
+  max-width: 1920px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+  @media (min-width: vars.$pc) {
+    padding: 0 60px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  line-height: 1.02;
+  font-weight: 700;
+  margin: 0 0 24px;
+}
+
+p {
+  margin: 0 0 16px;
+}
+
+h1,
+.h1 {
+  font-size: 60px;
+  margin-bottom: 17px;
+  @media (min-width: vars.$laptop) {
+    font-size: 82px;
+  }
+  @media (min-width: vars.$pc-xxl) {
+    font-size: 153px;
+    margin-bottom: 35px;
+  }
+}
+
+h2,
+.h2 {
+  font-size: 56px;
+  @media (min-width: vars.$laptop) {
+    font-size: 64px;
+  }
+  @media (min-width: vars.$pc-xxl) {
+    font-size: 132px;
+  }
+}
+
+h3,
+.h3 {
+  font-size: 32px;
+  margin-bottom: 12px;
+  @media (min-width: vars.$tablet) {
+    font-size: 46px;
+  }
+  @media (min-width: vars.$laptop) {
+    font-size: 50px;
+  }
+  @media (min-width: vars.$pc-xxl) {
+    font-size: 76px;
+  }
+}
+
+h4,
+.h4 {
+  font-size: 28px;
+  @media (min-width: vars.$laptop) {
+    font-size: 34px;
+  }
+  @media (min-width: vars.$pc-xl) {
+    font-size: 52px;
+  }
+  @media (min-width: vars.$pc-xxl) {
+    font-size: 72px;
+  }
+}
+
+h5,
+.h5 {
+  font-size: 26px;
+  margin-bottom: 10px;
+  @media (min-width: vars.$laptop) {
+    font-size: 30px;
+  }
+  @media (min-width: vars.$pc-xxl) {
+    font-size: 50px;
+  }
+}
+
+h6,
+.h6 {
+  font-size: 24px;
+  margin-bottom: 8px;
+  @media (min-width: vars.$laptop) {
+    font-size: 44px;
+  }
+}
+
+a {
+  color: inherit;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+img {
+  height: 100%;
+  max-width: 100%;
+}
+
+main > .container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  @media (min-width: vars.$pc) {
+    gap: 80px;
+  }
+}
+
+.light-block {
+  background: vars.$light;
+  color: vars.$dark-blue;
+  border-radius: 40px;
+  overflow: hidden;
+  padding: 30px;
+  @media (min-width: vars.$laptop) {
+    padding: 60px;
+  }
+  @media (min-width: vars.$pc) {
+    border-radius: 80px;
+    padding: 80px;
+  }
+}

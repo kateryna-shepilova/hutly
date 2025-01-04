@@ -1,0 +1,82 @@
+@use "./layout/variables" as vars;
+
+.services-section {
+  .section-title {
+    margin-bottom: 40px;
+    @media (min-width: vars.$pc-xl) {
+      margin-bottom: 80px;
+    }
+  }
+}
+
+.services-slider {
+  counter-reset: custom-counter;
+  height: 100%;
+  .swiper-wrapper {
+    height: 100%;
+  }
+  .swiper-arrows {
+    display: flex;
+    gap: 24px;
+  }
+  .swiper-button-prev, .swiper-button-next {
+    color: vars.$dark-blue;
+    position: static;
+    display: block;
+    margin: 20px 0;
+    width: 16px;
+    height: 26px;
+  }
+}
+
+.service-item {
+  counter-increment: custom-counter;
+  background: vars.$white;
+  border-radius: 20px;
+  padding: 20px;
+  overflow: hidden;
+  height: auto;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+  @media (min-width: vars.$pc-xxl) {
+    font-size: 18px;
+  }
+  @media (min-width: vars.$pc-xxl) {
+    font-size: 24px;
+    border-radius: 40px;
+    padding: 40px 40px 92px;
+  }
+  &.swiper-slide-active {
+    background: vars.$dark-blue;
+    color: vars.$white;
+  }
+  &:before {
+    content:  counter(custom-counter, decimal-leading-zero);
+    font-size: 36px;
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-bottom: 40px;
+    @media (min-width: vars.$laptop) {
+      font-size: 44px;
+      margin-bottom: 60px;
+    }
+    @media (min-width: vars.$pc-xl) {
+      font-size: 72px;
+    }
+    @media (min-width: vars.$pc-xxl) {
+      margin-bottom: 100px;
+    }
+  }
+  .title {
+    margin-bottom: 24px;
+    @media (min-width: vars.$pc-xxl) {
+      margin-bottom: 48px;
+    }
+  }
+  p {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
