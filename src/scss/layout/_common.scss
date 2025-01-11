@@ -1,4 +1,4 @@
-@use "./layout/variables" as vars;
+@use "./layout/variables" as *;
 
 *, *:before, *:after {
   box-sizing: border-box;
@@ -11,14 +11,14 @@ body {
 }
 
 body {
-  font-family: vars.$base-font;
-  font-size: vars.$font-size;
-  color: vars.$white;
-  background-color: vars.$dark-blue;
+  font-family: $base-font;
+  font-size: $font-size;
+  color: $white;
+  background-color: $dark-blue;
   line-height: 1.5;
   font-weight: 400;
   overflow-x: hidden;
-  @media (min-width: vars.$pc-xl) {
+  @media (min-width: $pc-xl) {
     font-size: 24px;
   }
   &.menu-active {
@@ -45,7 +45,7 @@ body {
   width: 100%;
   padding: 0 20px;
   margin: 0 auto;
-  @media (min-width: vars.$pc) {
+  @media (min-width: $pc) {
     padding: 0 60px;
   }
 }
@@ -65,10 +65,10 @@ h1,
 .h1 {
   font-size: 60px;
   margin-bottom: 17px;
-  @media (min-width: vars.$laptop) {
+  @media (min-width: $laptop) {
     font-size: 82px;
   }
-  @media (min-width: vars.$pc-xxl) {
+  @media (min-width: $pc-xxl) {
     font-size: 153px;
     margin-bottom: 35px;
   }
@@ -77,10 +77,10 @@ h1,
 h2,
 .h2 {
   font-size: 56px;
-  @media (min-width: vars.$laptop) {
+  @media (min-width: $laptop) {
     font-size: 64px;
   }
-  @media (min-width: vars.$pc-xxl) {
+  @media (min-width: $pc-xxl) {
     font-size: 132px;
   }
 }
@@ -89,13 +89,13 @@ h3,
 .h3 {
   font-size: 32px;
   margin-bottom: 12px;
-  @media (min-width: vars.$tablet) {
+  @media (min-width: $tablet) {
     font-size: 46px;
   }
-  @media (min-width: vars.$laptop) {
+  @media (min-width: $laptop) {
     font-size: 50px;
   }
-  @media (min-width: vars.$pc-xxl) {
+  @media (min-width: $pc-xxl) {
     font-size: 76px;
   }
 }
@@ -103,13 +103,13 @@ h3,
 h4,
 .h4 {
   font-size: 28px;
-  @media (min-width: vars.$laptop) {
+  @media (min-width: $laptop) {
     font-size: 34px;
   }
-  @media (min-width: vars.$pc-xl) {
+  @media (min-width: $pc-xl) {
     font-size: 52px;
   }
-  @media (min-width: vars.$pc-xxl) {
+  @media (min-width: $pc-xxl) {
     font-size: 72px;
   }
 }
@@ -118,10 +118,10 @@ h5,
 .h5 {
   font-size: 26px;
   margin-bottom: 10px;
-  @media (min-width: vars.$laptop) {
+  @media (min-width: $laptop) {
     font-size: 30px;
   }
-  @media (min-width: vars.$pc-xxl) {
+  @media (min-width: $pc-xxl) {
     font-size: 50px;
   }
 }
@@ -130,7 +130,7 @@ h6,
 .h6 {
   font-size: 24px;
   margin-bottom: 8px;
-  @media (min-width: vars.$laptop) {
+  @media (min-width: $laptop) {
     font-size: 44px;
   }
 }
@@ -151,21 +151,21 @@ main > .container {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  @media (min-width: vars.$pc) {
+  @media (min-width: $pc) {
     gap: 80px;
   }
 }
 
 .light-block {
-  background: vars.$light;
-  color: vars.$dark-blue;
+  background: $light;
+  color: $dark-blue;
   border-radius: 40px;
   overflow: hidden;
   padding: 30px;
-  @media (min-width: vars.$laptop) {
+  @media (min-width: $laptop) {
     padding: 60px;
   }
-  @media (min-width: vars.$pc) {
+  @media (min-width: $pc) {
     border-radius: 80px;
     padding: 80px;
   }

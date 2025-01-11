@@ -1,9 +1,9 @@
-@use "./layout/variables" as vars;
+@use "./layout/variables" as *;
 
 .btn {
-  background: vars.$blue;
-  color: vars.$white;
-  border: 1px solid vars.$blue;
+  background: $blue;
+  color: $white;
+  border: 1px solid $blue;
   display: inline-block;
   width: fit-content;
   border-radius: 26px;
@@ -13,20 +13,20 @@
   padding: 16px 20px;
   text-align: center;
   transition: all 0.3s ease-in-out;
-  @media (min-width: vars.$pc) {
+  @media (min-width: $pc) {
     padding: 25px 50px;
     font-size: 18px;
   }
   &:hover {
-    color: vars.$blue;
-    border-color: vars.$blue;
+    color: $blue;
+    border-color: $blue;
     background-color: transparent;
   }
 }
 
 .contact-btn {
-  background: vars.$white;
-  color: vars.$blue;
+  background: $white;
+  color: $blue;
   text-decoration: none;
   font-size: 18px;
   font-weight: 700;
@@ -34,7 +34,7 @@
   border-radius: 30px 100px 100px 30px;
   display: inline-block;
   transition: all 0.3s ease-in-out;
-  @media (min-width: vars.$laptop) {
+  @media (min-width: $laptop) {
     padding: 34px 43px 34px 36px;
   }
   &:hover {

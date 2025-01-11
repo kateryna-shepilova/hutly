@@ -1,49 +1,49 @@
-@use "./layout/variables" as vars;
+@use "./layout/variables" as *;
 
 .hero-section {
   overflow: hidden;
-  @media (min-width: vars.$tablet) {
+  @media (min-width: $tablet) {
     display: flex;
     gap: 20px;
   }
-  @media (min-width: vars.$pc) {
+  @media (min-width: $pc) {
     gap: 46px;
   }
   .col-left, .col-right {
-    background: vars.$white;
-    color: vars.$dark-blue;
+    background: $white;
+    color: $dark-blue;
     border-radius: 40px;
     padding: 30px;
-    @media (min-width: vars.$pc) {
+    @media (min-width: $pc) {
       border: 80px;
       padding: 80px;
     }
   }
   .col-left {
     margin-bottom: 30px;
-    @media (min-width: vars.$tablet) {
+    @media (min-width: $tablet) {
       display: flex;
       flex-direction: column;
       width: calc(66% - 10px);
       margin-bottom: 0;
     }
-    @media (min-width: vars.$pc) {
+    @media (min-width: $pc) {
       width: calc(69% - 23px);
     }
   }
   .col-right {
-    @media (min-width: vars.$tablet) {
+    @media (min-width: $tablet) {
       width: calc(34% - 10px);
       height: inherit;
       display: flex;
       flex-direction: column;
     }
-    @media (min-width: vars.$pc) {
+    @media (min-width: $pc) {
       width: calc(31% - 23px);
     }
   }
   .bottom-info {
-    @media (min-width: vars.$tablet) {
+    @media (min-width: $tablet) {
       margin-top: auto;
     }
   }
@@ -52,23 +52,23 @@
     font-size: 16px;
     display: inline-block;
     margin-bottom: 8px;
-    @media (min-width: vars.$laptop) {
+    @media (min-width: $laptop) {
       font-size: 18px;
     }
-    @media (min-width: vars.$pc-xl) {
+    @media (min-width: $pc-xl) {
       font-size: 20px;
       margin-bottom: 22px;
     }
   }
   .title {
     margin-bottom: 15px;
-    @media (min-width: vars.$pc-xl) {
+    @media (min-width: $pc-xl) {
       margin-bottom: 30px;
     }
   }
   .text {
     margin-bottom: 35px;
-    @media (min-width: vars.$pc-xl) {
+    @media (min-width: $pc-xl) {
       font-size: 22px;
       margin-bottom: 70px;
     }
@@ -83,14 +83,14 @@
     font-weight: 500;
     display: inline-block;
     margin-bottom: 20px;
-    @media (min-width: vars.$pc-xl) {
+    @media (min-width: $pc-xl) {
       margin-bottom: 34px;
     }
   }
   .section-title {
     letter-spacing: -0.05em;
     margin-bottom: 24px;
-    @media (min-width: vars.$pc-xl) {
+    @media (min-width: $pc-xl) {
       margin-bottom: 48px;
     }
   }
@@ -102,7 +102,7 @@
       height: 100%;
       object-fit: cover;
       border-radius: 28px;
-      @media (min-width: vars.$pc-xl) {
+      @media (min-width: $pc-xl) {
         border-radius: 56px;
       }
     }

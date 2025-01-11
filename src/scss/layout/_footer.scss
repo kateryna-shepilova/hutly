@@ -1,17 +1,17 @@
-@use "./layout/variables" as vars;
+@use "./layout/variables" as *;
 
 .footer {
   margin-top: 40px;
   margin-bottom: 40px;
   .holder {
-    background: vars.$blue;
+    background: $blue;
     border-radius: 40px;
     padding: 40px 20px;
-    @media (min-width: vars.$laptop) {
+    @media (min-width: $laptop) {
       border-radius: 80px;
       padding: 60px;
     }
-    @media (min-width: vars.$pc-xxl) {
+    @media (min-width: $pc-xxl) {
       padding: 125px 65px 100px 100px;
     }
   }
@@ -19,15 +19,15 @@
 
 .footer-top {
   margin-bottom: 24px;
-  @media (min-width: vars.$tablet) {
+  @media (min-width: $tablet) {
     display: flex;
     justify-content: space-between;
     gap: 40px;
   }
-  @media (min-width: vars.$laptop) {
+  @media (min-width: $laptop) {
     margin-bottom: 50px;
   }
-  @media (min-width: vars.$pc-xxl) {
+  @media (min-width: $pc-xxl) {
     gap: 33px;
     margin-bottom: 75px;
   }
@@ -36,17 +36,17 @@
 .footer-title {
   font-size: 46px;
   margin-bottom: 20px;
-  @media (min-width: vars.$tablet) {
+  @media (min-width: $tablet) {
     font-size: 54px;
     margin-bottom: 0;
   }
-  @media (min-width: vars.$laptop) {
+  @media (min-width: $laptop) {
     font-size: 72px;
   }
-  @media (min-width: vars.$pc-xl) {
+  @media (min-width: $pc-xl) {
     font-size: 132px;
   }
-  @media (min-width: vars.$pc-xxl) {
+  @media (min-width: $pc-xxl) {
     font-size: 175px;
   }
 }
@@ -57,38 +57,38 @@
   font-size: 24px;
   display: block;
   margin-bottom: 80px;
-  @media (min-width: vars.$tablet) {
+  @media (min-width: $tablet) {
     width: 50%;
   }
-  @media (min-width: vars.$laptop) {
+  @media (min-width: $laptop) {
     font-size: 30px;
     margin-bottom: 100px;
   }
-  @media (min-width: vars.$pc-xl) {
+  @media (min-width: $pc-xl) {
     font-size: 36px;
     margin-bottom: 140px;
   }
-  @media (min-width: vars.$pc-xxl) {
+  @media (min-width: $pc-xxl) {
     font-size: 44px;
     margin-bottom: 220px;
   }
 }
 
 .footer-bottom {
-  background: rgba(vars.$white, 0.03);
+  background: rgba($white, 0.03);
   border-radius: 40px;
   padding: 30px;
-  @media (min-width: vars.$tablet) {
+  @media (min-width: $tablet) {
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-radius: 80px;
     gap: 40px;
   }
-  @media (min-width: vars.$pc-xl) {
+  @media (min-width: $pc-xl) {
     padding: 40px 60px;
   }
-  @media (min-width: vars.$pc-xxl) {
+  @media (min-width: $pc-xxl) {
     padding: 47px 90px;
   }
 }
@@ -98,7 +98,7 @@
   width: 100%;
   display: inline-block;
   margin-bottom: 20px;
-  @media (min-width: vars.$tablet) {
+  @media (min-width: $tablet) {
     margin-bottom: 0;
   }
   img {
@@ -114,7 +114,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  @media (min-width: vars.$pc-xxl) {
+  @media (min-width: $pc-xxl) {
     column-gap: 50px;
   }
   a {
@@ -123,7 +123,7 @@
 }
 
 .footer-btn {
-  background: rgba(vars.$white, 0.05);
+  background: rgba($white, 0.05);
   border-radius: 40px;
   font-size: 18px;
   font-weight: 700;
@@ -136,19 +136,19 @@
   flex-shrink: 0;
   min-height: 120px;
   transition: all 0.3s ease-in-out;
- @media (min-width: vars.$tablet) {
+ @media (min-width: $tablet) {
    min-width: 250px;
  }
-  @media (min-width: vars.$pc-xl) {
+  @media (min-width: $pc-xl) {
     font-size: 24px;
   }
-  @media (min-width: vars.$pc-xxl) {
+  @media (min-width: $pc-xxl) {
     min-width: 320px;
     font-size: 28px;
     border-radius: 80px;
   }
   &:hover {
-    background: vars.$white;
-    color: vars.$dark-blue;
+    background: $white;
+    color: $dark-blue;
   }
 }

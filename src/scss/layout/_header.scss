@@ -1,20 +1,20 @@
-@use "./layout/variables" as vars;
+@use "./layout/variables" as *;
 
 .header {
   padding: 24px 0;
   position: relative;
-  @media (min-width: vars.$laptop) {
+  @media (min-width: $laptop) {
     padding: 40px 0;
   }
   .holder {
-    background: rgba(vars.$white, 0.05);
+    background: rgba($white, 0.05);
     border-radius: 128px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-left: 20px;
     padding-right: 20px;
-    @media (min-width: vars.$laptop) {
+    @media (min-width: $laptop) {
       padding-left: 60px;
       padding-right: 0;
     }
@@ -26,7 +26,7 @@
   width: 100%;
   display: inline-block;
   margin: 0;
-  @media (min-width: vars.$pc) {
+  @media (min-width: $pc) {
     max-width: 135px;
   }
   img {
@@ -36,7 +36,7 @@
 }
 
 .header-menu-holder {
-  background: vars.$dark-blue;
+  background: $dark-blue;
   padding: 80px 30px;
   position: absolute;
   top: 0;
@@ -47,7 +47,7 @@
   overflow-y: auto;
   text-align: center;
   transition: all 0.3s ease-in-out;
-  @media (min-width: vars.$laptop) {
+  @media (min-width: $laptop) {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -61,7 +61,7 @@
     text-align: left;
     padding: 0;
   }
-  @media (min-width: vars.$pc) {
+  @media (min-width: $pc) {
     gap: 198px;
   }
   .menu-active & {
@@ -73,10 +73,10 @@
   list-style-type: none;
   padding: 0;
   margin: 0 0 30px;
-  @media (min-width: vars.$laptop) {
+  @media (min-width: $laptop) {
     margin-bottom: 0;
   }
-  @media (min-width: vars.$laptop) {
+  @media (min-width: $laptop) {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -84,7 +84,7 @@
   }
   li {
     margin-bottom: 30px;
-    @media (min-width: vars.$laptop) {
+    @media (min-width: $laptop) {
       margin-bottom: 0;
     }
     &:last-child {
@@ -97,10 +97,10 @@
     }
   }
   a {
-    color: vars.$white;
+    color: $white;
     text-decoration: none;
     display: inline-block;
-    @media (min-width: vars.$laptop) {
+    @media (min-width: $laptop) {
       font-size: 18px;
     }
   }
@@ -126,7 +126,7 @@
       height: 5px;
       border-radius: 50%;
       display: block;
-      background: vars.$white;
+      background: $white;
       opacity: 0;
       transition: all 0.3s ease-in-out;
     }
@@ -143,7 +143,7 @@
   font-size: 0;
   position: relative;
   z-index: 2;
-  @media (min-width: vars.$laptop) {
+  @media (min-width: $laptop) {
     display: none;
   }
   &:before,
@@ -153,7 +153,7 @@
   &:before,
   &:after,
   span {
-    background: vars.$white;
+    background: $white;
     position: absolute;
     left: 0;
     width: 100%;
